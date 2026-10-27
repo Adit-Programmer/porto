@@ -1,7 +1,6 @@
-
 const profile = {
-  github: "https://github.com/USERNAME-KAMU",
-  email: "emailkamu@example.com",
+  github: "https://github.com/Adit-Programmer",
+  email: "",
 };
 
 const projects = [
@@ -23,51 +22,33 @@ const projects = [
   },
   {
     id: "02",
-    title: "Task Manager",
-    category: "JavaScript",
-    icon: "JS",
+    title: "Eksperimen Berikutnya",
+    category: "Coming Soon",
+    icon: "?",
     description:
-      "Aplikasi pengelolaan tugas untuk mencatat pekerjaan dan memantau progres harian.",
-    tech: ["JavaScript", "DOM", "CSS3"],
-    image:
-      "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=900&q=80",
-    status: "Contoh proyek",
+      "Proyek baru sedang disiapkan dan akan segera dipublikasikan di halaman ini.",
+    tech: ["Segera Hadir"],
+    image: "",
+    status: "Coming Soon",
     demo: "#",
     github: "#",
     details:
-      "Proyek latihan untuk manipulasi DOM, event listener, dan penyimpanan data menggunakan localStorage.",
+      "Slot untuk proyek berikutnya. Pantau terus halaman ini untuk melihat progresnya.",
   },
   {
     id: "03",
-    title: "Student Management",
-    category: "HTML & CSS",
-    icon: "</>",
+    title: "Eksplorasi Cybersecurity",
+    category: "Coming Soon",
+    icon: "?",
     description:
-      "Konsep dashboard pengelolaan data siswa dengan tabel dan antarmuka administrasi.",
-    tech: ["HTML5", "CSS3", "UI Design"],
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80",
-    status: "Konsep UI",
+      "Rencana eksperimen seputar keamanan siber dan kecerdasan artifisial sedang disusun.",
+    tech: ["Segera Hadir"],
+    image: "",
+    status: "Coming Soon",
     demo: "#",
     github: "#",
     details:
-      "Konsep tampilan sistem informasi siswa. Fitur backend dan database belum diimplementasikan.",
-  },
-  {
-    id: "04",
-    title: "Portfolio Website",
-    category: "UI/UX",
-    icon: "UI",
-    description:
-      "Website portofolio pribadi dengan desain minimalis, responsif, dan komponen proyek dinamis.",
-    tech: ["HTML5", "CSS3", "JavaScript"],
-    image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80",
-    status: "Sedang dibangun",
-    demo: "#",
-    github: "#",
-    details:
-      "Website ini dibuat untuk mendokumentasikan proyek, kemampuan, dan perkembangan belajar pemrograman.",
+      "Rencana eksplorasi di bidang cybersecurity dan AI akan ditampilkan setelah siap.",
   },
 ];
 
@@ -77,8 +58,14 @@ const dialog = document.querySelector("#project-dialog");
 const dialogContent = document.querySelector("#dialog-content");
 
 document.querySelector("#year").textContent = new Date().getFullYear();
-document.querySelector("#github-link").href = profile.github;
-document.querySelector("#email-link").href = `mailto:${profile.email}`;
+
+const githubLink = document.querySelector("#github-link");
+if (githubLink) githubLink.href = profile.github;
+
+const emailLink = document.querySelector("#email-link");
+if (emailLink && profile.email) {
+  emailLink.href = `mailto:${profile.email}`;
+}
 
 function renderProjects(category = "all") {
   const visibleProjects = projects.filter(
@@ -86,14 +73,15 @@ function renderProjects(category = "all") {
   );
 
   projectGrid.innerHTML = visibleProjects
-    .map(
-      (project) => `
+    .map((project) => {
+      const imageContent = project.image
+        ? `<img src="${project.image}" alt="Preview ${project.title}" loading="lazy">`
+        : `<span class="project-image-placeholder">${project.icon}</span>`;
+
+      return `
     <article class="project-card">
       <div class="project-image">
-        <img src="${project.image}"
-             alt="Preview ${project.title}"
-             loading="lazy"
-             onerror="this.style.display='none'">
+        ${imageContent}
         <span class="project-number mono">PROJECT / ${project.id}</span>
       </div>
       <div class="project-body">
@@ -111,8 +99,8 @@ function renderProjects(category = "all") {
         </div>
       </div>
     </article>
-  `,
-    )
+  `;
+    })
     .join("");
 }
 

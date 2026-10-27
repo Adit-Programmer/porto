@@ -1062,3 +1062,159 @@ dialog::backdrop {
     min-height: 680px;
   }
 }
+
+.brand {
+  font-family: "Dancing Script", cursive;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+footer .brand {
+  font-family: "Dancing Script", cursive;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.avatar-initials {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding-bottom: 80px;
+  font-family: var(--font);
+  font-weight: 800;
+  font-size: 100px;
+  letter-spacing: -5px;
+  color: var(--text);
+  background: #191f19;
+}
+
+.project-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-family: var(--mono);
+  font-size: 48px;
+  color: var(--muted);
+  background: #202b22;
+  position: relative;
+}
+
+.project-image-placeholder::after {
+  content: "COMING SOON";
+  position: absolute;
+  bottom: 18px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+.badge-coming-soon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: var(--muted);
+  font: 10px var(--mono);
+  letter-spacing: 1.2px;
+  margin-bottom: 14px;
+}
+
+.badge-coming-soon::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--muted);
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.coming-soon-panel {
+  padding: 24px;
+  margin-top: 24px;
+  border: 1px dashed var(--line);
+  border-radius: 3px;
+  background: #141c16;
+}
+
+.coming-soon-panel p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.about-content > p {
+  max-width: 520px;
+  margin: 5px 0 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.about-content > p:last-of-type {
+  margin-bottom: 0;
+}
+
+.certificates {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border-top: 1px solid #ffffff15;
+}
+
+.skill-icon img,
+.skill-icon svg {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}
+
+.js-icon {
+  border-color: #36363c;
+  background: transparent;
+  color: var(--text);
+}
+
+@media (max-width: 850px) {
+  .brand {
+    font-size: 28px;
+  }
+  footer .brand {
+    font-size: 24px;
+  }
+  .avatar-initials {
+    font-size: 80px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .brand {
+    font-size: 25px;
+  }
+  footer .brand {
+    font-size: 22px;
+  }
+  .avatar-initials {
+    font-size: 60px;
+    padding-bottom: 40px;
+    letter-spacing: -2px;
+  }
+}
