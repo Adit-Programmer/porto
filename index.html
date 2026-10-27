@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0b0d" />
+    <meta
+      name="description"
+      content="Portofolio Aditya — Web Developer yang membangun proyek digital."
+    />
+    <title>Aditya — Developer Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <a class="brand" href="#home">adit<span>.</span></a>
+      <nav>
+        <a href="#about">Tentang</a>
+        <a href="#projects">Proyek</a>
+        <a href="#skills">Keahlian</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+      <a class="nav-cta" href="#projects">Lihat karya ↗</a>
+    </header>
+
+    <main>
+      <section class="hero section" id="home">
+        <div class="hero-copy">
+          <div class="status">
+            <span></span> TERBUKA UNTUK BELAJAR & BERKOLABORASI
+          </div>
+          <p class="eyebrow">HALO, SAYA ADITYA</p>
+          <h1>Membangun sesuatu<br />yang <span>berarti.</span></h1>
+          <p class="hero-desc">
+            Pelajar dan calon software developer yang tertarik pada web
+            development, teknologi, dan pemecahan masalah melalui kode.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects"
+              >Jelajahi proyek <span>↘</span></a
+            >
+            <a class="button button-ghost" href="#contact">Hubungi saya</a>
+          </div>
+          <div class="hero-meta">
+            <span><i></i> Berbasis di Indonesia</span>
+            <span>HTML · CSS · JavaScript</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-grid"></div>
+          <div class="profile-frame">
+            <!-- Ganti URL ini dengan foto kamu nanti -->
+            <img
+              src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=700&q=80"
+              alt="Foto profil sementara"
+              onerror="this.style.display = 'none'"
+            />
+            <div class="profile-overlay">
+              <span class="mono">CURRENTLY BUILDING</span>
+              <strong>Ideas into reality.</strong>
+            </div>
+          </div>
+          <div class="floating-card"><span>⌘</span> Always learning</div>
+          <span class="visual-index mono">FIG. 001 / PROFILE</span>
+        </div>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="section-heading">
+          <p class="eyebrow">01 / TENTANG SAYA</p>
+          <h2>Rasa ingin tahu,<br /><span>diubah menjadi karya.</span></h2>
+        </div>
+        <div class="about-content">
+          <p>
+            Saya sedang mengembangkan kemampuan pemrograman melalui proyek
+            nyata. Saya percaya bahwa cara terbaik untuk belajar adalah
+            membangun, menguji, memperbaiki, dan mencoba lagi.
+          </p>
+          <div class="about-facts">
+            <div>
+              <span class="mono">FOKUS</span><strong>Web Development</strong>
+            </div>
+            <div>
+              <span class="mono">STATUS</span><strong>Student Developer</strong>
+            </div>
+            <div>
+              <span class="mono">TUJUAN</span><strong>Build & Improve</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects section" id="projects">
+        <div class="section-heading project-heading">
+          <div>
+            <p class="eyebrow">02 / PROYEK PILIHAN</p>
+            <h2>Eksperimen menjadi <span>solusi.</span></h2>
+          </div>
+          <p class="section-note">
+            Beberapa proyek untuk menunjukkan proses belajar dan kemampuan saya.
+          </p>
+        </div>
+
+        <div class="filters" id="filters">
+          <button class="filter active" data-filter="all">Semua</button>
+          <button class="filter" data-filter="JavaScript">JavaScript</button>
+          <button class="filter" data-filter="HTML & CSS">HTML & CSS</button>
+          <button class="filter" data-filter="UI/UX">UI/UX</button>
+        </div>
+        <div class="project-grid" id="project-grid"></div>
+      </section>
+
+      <section class="skills section" id="skills">
+        <div class="section-heading">
+          <p class="eyebrow">03 / KEAHLIAN</p>
+          <h2>Tools yang saya <span>gunakan.</span></h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill">
+            <span class="skill-icon">5</span>
+            <div>
+              <strong>HTML5</strong>
+              <p>Struktur web</p>
+            </div>
+          </div>
+          <div class="skill">
+            <span class="skill-icon">#</span>
+            <div>
+              <strong>CSS3</strong>
+              <p>Visual & layout</p>
+            </div>
+          </div>
+          <div class="skill">
+            <span class="skill-icon js-icon">JS</span>
+            <div>
+              <strong>JavaScript</strong>
+              <p>Interaktivitas</p>
+            </div>
+          </div>
+          <div class="skill">
+            <span class="skill-icon">⌘</span>
+            <div>
+              <strong>Git & GitHub</strong>
+              <p>Version control</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <p class="eyebrow">04 / KONTAK</p>
+        <h2>Punya ide menarik?<br /><span>Mari terhubung.</span></h2>
+        <p>
+          Saya terbuka untuk belajar bersama, berdiskusi, dan berkolaborasi
+          dalam proyek.
+        </p>
+        <div class="contact-actions">
+          <a
+            class="button button-primary"
+            id="email-link"
+            href="mailto:emailkamu@example.com"
+            >Kirim email ↗</a
+          >
+          <a
+            class="button button-ghost"
+            id="github-link"
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub ↗</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand" href="#home">adit<span>.</span></a>
+      <p>Dirancang & dibangun dengan rasa ingin tahu.</p>
+      <span class="mono">© <span id="year"></span> ADITYA</span>
+    </footer>
+
+    <dialog id="project-dialog">
+      <div class="dialog-top">
+        <span class="eyebrow">DETAIL PROYEK</span>
+        <button class="close-dialog" aria-label="Tutup detail">✕</button>
+      </div>
+      <div id="dialog-content"></div>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
